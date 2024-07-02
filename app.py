@@ -7,15 +7,19 @@ import tensorflow as tf
 import keras.preprocessing.image as ImageDataGenerator
 from PIL import Image
 import google.generativeai as genai
-from dotenv import load_dotenv
-load_dotenv()
 
 from IPython.display import display
 from IPython.display import Markdown
 
+# Important libraries
 import os
-## API_KEY = AIzaSyCihuiYQK_yBKxHtduqrMIM8_BtaBOxYKo
-os.environ['GOOGLE_API_KEY'] = os.getenv("API_KEY")
+from dotenv import load_dotenv
+# Load secret .env file
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
+
+## API_KEY=AIzaSyCihuiYQK_yBKxHtduqrMIM8_BtaBOxYKo
+os.environ['GOOGLE_API_KEY'] = API_KEY
 
 genai.configure(api_key=os.environ['GOOGLE_API_KEY'])
 
