@@ -204,7 +204,7 @@ elif page == "Scanner":
             # Predict Button
            # Predict and Show Image Button
     if st.button("Predict"):
-        if test_image_camera:
+        if  test_image_camera:
         # Perform prediction on test_image_camera
             index_prediction = model_prediction(test_image_camera)
             disease_name = diseases(index_prediction)
@@ -218,12 +218,15 @@ elif page == "Scanner":
                                               3. Cure Recommendations: List 5-10 cure recommendations in bullet points.
                                               The disease is: """+disease_name)
             text = response._result.candidates[0].content.parts[0].text
+            with st.spinner('Wait for it...'):
+             time.sleep(8)
             st.markdown(text)
         elif test_image_upload:
         # Perform prediction on test_image_upload
-           index_prediction = model_prediction(test_image_upload)
-           disease_name = diseases(index_prediction)
-           response = model.generate_content("""Based on the plant disease, suggest about 5-10 cure 
+             with st.spinner('Wait for it...'):
+               index_prediction = model_prediction(test_image_upload)
+               disease_name = diseases(index_prediction)
+               response = model.generate_content("""Based on the plant disease, suggest about 5-10 cure 
                                               recommendations and provide detailed information about the disease. 
                                               Please format the response properly in markdown format I want to display
                                               on my website with the following structure:
@@ -232,11 +235,11 @@ elif page == "Scanner":
                                               headings and subheadings.
                                               3. Cure Recommendations: List 5-10 cure recommendations in bullet points.
                                               The disease is: """+disease_name)
-           text = response._result.candidates[0].content.parts[0].text
-           st.markdown(text)
+               text = response._result.candidates[0].content.parts[0].text
+             st.markdown(text)
            
-    else:
-        st.write("Please capture an image or upload a file first.")
+        else:
+          st.write("Please capture an image or upload a file first.")
         
     st.markdown("""
 ---
