@@ -119,7 +119,7 @@ if page == "Home":
             }
         </style>
     """, unsafe_allow_html=True)
-    st.markdown("<h1 class='title'>LeafGuardian</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 class='title'>LeafGuardian Sex</h1>", unsafe_allow_html=True)
     
     #Lottie
     lottie_scanner = load_lottiefile("lotiie/First Project/tree_grow.json")
