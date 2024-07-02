@@ -7,6 +7,7 @@ import tensorflow as tf
 import keras.preprocessing.image as ImageDataGenerator
 from PIL import Image
 import google.generativeai as genai
+import time
 
 from IPython.display import display
 from IPython.display import Markdown
