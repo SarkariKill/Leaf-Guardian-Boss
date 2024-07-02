@@ -19,4 +19,4 @@ LeafGuardian is an application designed to diagnose plant diseases based on imag
 
 Try out the live version of the project at : https://leaf-guardian-boss.onrender.com
                                                               or
-                                            https://leaf-guardian-bossai.streamlit.app
+                                             https://leaf-guardian-boss.streamlit.app
